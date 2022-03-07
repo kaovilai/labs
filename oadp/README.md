@@ -43,10 +43,12 @@ chmod +x ./install-deploy.sh
 ```
 
 ### Option 3: [OpenShift 4.9 Playground](https://developers.redhat.com/courses/explore-openshift/openshift-49-playground)
+In the terminal on playground run the following
 ```sh
 chmod +r /opt/kubeconfig
 sudo podman run -it --env KUBECONFIG=/opt/kubeconfig -v /bin:/bin -v /opt/kubeconfig:/opt/kubeconfig:z -w /home python sh
 ```
+Once inside docker shell, run the following.
 ```sh
 curl https://raw.githubusercontent.com/kaovilai/labs/master/oadp/install-deploy.sh -o install-deploy.sh;
 chmod +x ./install-deploy.sh
