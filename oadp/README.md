@@ -41,3 +41,26 @@ curl https://raw.githubusercontent.com/kaovilai/labs/master/oadp/install-deploy.
 chmod +x ./install-deploy.sh
 ./install-deploy.sh
 ```
+
+### Option 3: [OpenShift 4.9 Playground](https://developers.redhat.com/courses/explore-openshift/openshift-49-playground)
+```sh
+chmod +r /opt/kubeconfig
+sudo podman run -it --env KUBECONFIG=/opt/kubeconfig -v /bin:/bin -v /opt/kubeconfig:/opt/kubeconfig:z -w /home python sh
+```
+```sh
+curl https://raw.githubusercontent.com/kaovilai/labs/master/oadp/install-deploy.sh -o install-deploy.sh;
+chmod +x ./install-deploy.sh
+./install-deploy.sh
+```
+```sh
+You are logged in to the OpenShift cluster.
+1) kubeadmin
+2) admin
+3) OTHER
+```
+Select `2`
+
+```sh
+What is cluster admin password? example: XXXXX-XXXXX-XXXXX-XXXXX
+```
+type `admin`
